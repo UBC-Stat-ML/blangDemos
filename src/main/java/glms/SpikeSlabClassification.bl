@@ -1,0 +1,43 @@
+package glms
+
+
+model SpikeSlabClassification {
+  
+  param Integer maxNumberFeatures ?: Integer.MAX_VALUE
+  
+  param GlobalDataSource data
+  param Plate<String> instances, features
+  
+  param Plated<Double> covariates
+  random Plated<SpikedRealVar> parameters
+  random Plated<IntVar> labels
+  
+  random RealVar activeProbability ?: latentReal
+  random RealVar sigma ?: latentReal
+  random RealVar intercept ?: latentReal
+  
+  laws {
+    
+    for (Index<String> instance : instances.indices) {
+      labels.get(instance) | intercept, DotProduct dotProduct = DotProduct.of(features, parameters, covariates.slice(instance))
+        ~ Bernoulli(logistic(intercept + dotProduct.compute))
+    }
+    
+    for (Index<String> feature : features.indices) {
+      parameters.get(feature).selected | activeProbability ~ Bernoulli(activeProbability)
+      parameters.get(feature).continuousPart | sigma ~ StudentT(1.0, 0.0, sigma)
+    }
+    intercept | sigma ~ StudentT(1.0, 0.0, sigma)
+    
+    | maxNumberFeatures, 
+      Collection<IntVar> indicators = parameters.asCollection(features).map[selected].toList 
+    ~  LogPotential(
+        if (indicators.map[intValue].sum > maxNumberFeatures) NEGATIVE_INFINITY 
+        else 0.0
+      )
+        
+    activeProbability ~ ContinuousUniform(0, 1)
+    sigma ~ Exponential(1.0)
+    
+  }
+}
