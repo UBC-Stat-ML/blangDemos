@@ -1,0 +1,18 @@
+package demos
+
+model UnidentifiableEllipticCurve {
+  random RealVar x ?: latentReal
+  random RealVar y ?: latentReal
+  param IntVar nTrials ?: 100000
+  random IntVar nFails ?: nTrials/2
+  laws {
+    x ~ ContinuousUniform(-3.0, 3.0)
+    y ~ ContinuousUniform(-3.0, 3.0)
+    nFails | nTrials, x, y ~ Binomial(nTrials, {
+      val transformed = pow(y, 2) - pow(x, 3) + 2.0 * x - 0.5
+      if (transformed < 0.0) return 0.0
+      if (transformed > 1.0) return 1.0
+      return transformed
+    })
+  }
+}

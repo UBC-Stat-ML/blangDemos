@@ -11,7 +11,7 @@ targetCompatibility = '1.8'
 
 dependencies {
   xtextLanguages "ca.ubc.stat.blang:ca.ubc.stat.blang:3.25.3"
-  compile group: 'ca.ubc.stat', name: 'blangSDK', version: '1.29.3'
+  compile group: 'ca.ubc.stat', name: 'blangSDK', version: '1.29.5'
 }
 
 xtext {
@@ -42,4 +42,4 @@ xtend {
   }
 }
 
-mainClassName = "demo.Example"
+mainClassName = "demos.Main"
