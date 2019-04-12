@@ -1,4 +1,4 @@
-package demo
+package demos
 
 model AnnealedMVN {
   param Integer dim ?: 5
