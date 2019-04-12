@@ -1,4 +1,10 @@
 name,description,class,arguments
 titanic,Spike and Slab classification on the Titanic passengers dataset,glms.SpikeSlabClassification,--model.data data/titanic/titanic-covariates.csv --model.instances.name Name --model.instances.maxSize 200 --model.labels.dataSource data/titanic/titanic.csv --model.labels.name Survived
-elliptic,A synthetic unidentifiable and multimodal problem built from an elliptic curve,demos.UnidentifiableEllipticCurve,
-ising,An Ising model,blang.validation.internals.fixtures.Ising,
+elliptic,Synthetic unidentifiable and multimodal problem built from an elliptic curve,demos.UnidentifiableEllipticCurve,
+Ising-critical,Classical Ising model at the critical point,blang.validation.internals.fixtures.Ising,
+rockets,Hierarchical model for rocket launch failure counts,hier.HierarchicalRockets,--model.data data/failure_counts.csv --model.rocketTypes.name LV.Type
+ariane,The rockets model on the Ariane rockets subset,hier.HierarchicalRockets,--model.data data/failure_counts.csv --model.rocketTypes.name LV.Type --model.filter Ariane
+discrete,Discrete multi-modal problem,demos.DiscreteMultimodal,
+normal,Independent and identically distributed normal random variables,demos.AnnealedMVN,
+magnetic-critical,Ising model under a magnetic field,blang.validation.internals.fixtures.Ising,--model.moment 0.1
+Ising-supercritical,Classical Ising model past the critical point,blang.validation.internals.fixtures.Ising,--model.beta 1

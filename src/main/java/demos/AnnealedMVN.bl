@@ -1,0 +1,14 @@
+package demo
+
+model AnnealedMVN {
+  param Integer dim ?: 5
+  param Double tau_0 ?: 1.0
+  param Double tau ?: 5.0
+  random Matrix x ?: latentVector(dim)
+  laws {
+    for (int i : 0 ..< dim) {
+      x.getRealVar(i) | tau_0 ~ Normal(0.0, 1.0/tau_0)
+      | RealVar component = x.getRealVar(i), tau, tau_0 ~ LogPotential(-1.0/(tau - tau_0)*component*component)
+    }
+  }
+}

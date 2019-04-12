@@ -1,0 +1,368 @@
+LV.Type,numberOfLaunches,numberOfFailures
+Aerobee,1,0
+Angara A5,1,0
+Antares 110,2,0
+Antares 120,2,0
+Antares 130,1,1
+Antares 230,1,0
+Ariane 1,11,2
+Ariane 2,6,1
+Ariane 3,11,1
+Ariane 40,7,0
+Ariane 42L,13,0
+Ariane 42P,15,1
+Ariane 44L,40,1
+Ariane 44LP,26,1
+Ariane 44P,15,0
+Ariane 5ECA,61,1
+Ariane 5ES,1,0
+Ariane 5ES/ATV,5,0
+Ariane 5G,16,3
+Ariane 5G+,3,0
+Ariane 5GS,6,0
+ARPA Taurus,2,0
+ASLV,4,2
+Athena-1,2,0
+Athena-2,3,1
+Atlas 3A,2,0
+Atlas 3B,4,0
+Atlas Able,3,3
+Atlas Agena A,4,2
+Atlas Agena B,28,5
+Atlas Agena D,15,0
+Atlas B,1,0
+Atlas Burner 2,2,1
+Atlas Centaur,4,2
+Atlas Centaur D,7,0
+Atlas D,16,4
+Atlas E,15,0
+Atlas E Altair,1,0
+Atlas E/MSD,1,1
+Atlas E/OIS,1,0
+Atlas E/SGS-2,4,0
+Atlas E/SVS,1,1
+Atlas F,9,1
+Atlas F/Agena D,1,0
+Atlas F/MSD,3,0
+Atlas F/OIS,1,0
+Atlas F/PTS,1,0
+Atlas F/SVS,7,0
+Atlas G Centaur,7,1
+Atlas H,5,0
+Atlas I,11,2
+Atlas II,10,0
+Atlas IIA,23,0
+Atlas IIAS,30,0
+Atlas SLV-3,4,0
+Atlas SLV-3 Agena B,1,0
+Atlas SLV-3 Agena D,48,4
+Atlas SLV-3A Agena D,12,1
+Atlas SLV-3C Centaur,17,2
+Atlas SLV-3D Centaur,32,2
+Atlas V 401,36,1
+Atlas V 411,4,0
+Atlas V 421,6,0
+Atlas V 431,3,0
+Atlas V 501,6,0
+Atlas V 521,2,0
+Atlas V 531,3,0
+Atlas V 541,4,0
+Atlas V 551,7,0
+Black Arrow,2,1
+Blue Scout II,1,1
+Blue Scout Jr,8,0
+Chang Zheng 1,2,0
+Chang Zheng 11,2,0
+Chang Zheng 2,1,1
+Chang Zheng 2C,37,1
+Chang Zheng 2C-III/SD,7,0
+Chang Zheng 2D,32,0
+Chang Zheng 2E,7,2
+Chang Zheng 2F,12,0
+Chang Zheng 2FT1,1,0
+Chang Zheng 3,13,1
+Chang Zheng 3A,25,0
+Chang Zheng 3B,38,2
+Chang Zheng 3B/YZ-1,1,0
+Chang Zheng 3C,13,0
+Chang Zheng 3C/YZ-1,2,0
+Chang Zheng 4,2,0
+Chang Zheng 4B,28,1
+Chang Zheng 4C,20,1
+Chang Zheng 5/YZ-2,1,0
+Chang Zheng 6,1,0
+Chang Zheng 7,1,0
+Chang Zheng 7/YZ-1A,1,0
+Commercial Titan 3,4,0
+Conestoga 1620,1,1
+Delta 0300,3,1
+Delta 0900,2,0
+Delta 1410,1,0
+Delta 1604,2,0
+Delta 1900,1,0
+Delta 1910,1,0
+Delta 1913,1,0
+Delta 1914,2,0
+Delta 2310,3,0
+Delta 2313,3,1
+Delta 2910,6,0
+Delta 2913,2,0
+Delta 2914,30,2
+Delta 3910,3,0
+Delta 3910/PAM,7,0
+Delta 3913,1,0
+Delta 3914,12,2
+Delta 3920,3,0
+Delta 3920-8,1,0
+Delta 3920/PAM,6,0
+Delta 3924,5,0
+Delta 4925-8,2,0
+Delta 4H,9,1
+Delta 4M,3,0
+"Delta 4M+(4,2)",14,0
+"Delta 4M+(5,2)",2,0
+"Delta 4M+(5,4)",7,0
+Delta 5920-8,1,0
+Delta 6920-10,2,0
+Delta 6920-8,1,0
+Delta 6925,13,0
+Delta 6925-8,1,0
+Delta 7320-10,4,0
+Delta 7320-10C,8,0
+Delta 7326-9.5,3,0
+Delta 7420-10C,13,0
+Delta 7425-10,1,0
+Delta 7425-9.5,3,0
+Delta 7426-9.5,1,0
+Delta 7920-10,6,0
+Delta 7920-10C,19,0
+Delta 7920-10L,2,0
+Delta 7920-8,1,0
+Delta 7920H,3,0
+Delta 7925,34,2
+Delta 7925-10,2,0
+Delta 7925-10C,1,0
+Delta 7925-10L,2,0
+Delta 7925-8,2,0
+Delta 7925-9.5,28,0
+Delta 7925H,3,0
+Delta 8930,3,2
+DF-21,1,0
+Diamant A,4,0
+Diamant B,5,2
+Diamant BP.4,3,0
+Dnepr,22,1
+Energiya,1,1
+Energiya/Buran,1,0
+Epsilon,2,0
+Europa I,3,3
+Europa II,1,1
+Falcon 1,5,3
+Falcon 9,34,1
+Feng Bao 1,8,4
+GSLV Mk I,6,3
+GSLV Mk II,5,1
+H-1,9,0
+H-II,7,1
+H-IIA 202,20,0
+H-IIA 2022,3,0
+H-IIA 2024,7,1
+H-IIA 204,3,0
+H-IIB,6,0
+Juno II,10,5
+Jupiter C,6,3
+K65M-RB,4,0
+Kosmos 11K63,126,8
+Kosmos 11K65,4,2
+Kosmos 11K65M,445,22
+Kosmos 63S1,38,12
+Kosmos 65S3,8,1
+KT-1,3,3
+KT-2,1,0
+Kuaizhou,2,0
+Kuaizhou-1A,1,0
+Kwangmyongsong,1,0
+Lambda 4S,5,4
+LLV-1,1,1
+LMLV-1,1,0
+M-V,7,1
+Minotaur 1,11,0
+Minotaur IV,2,0
+Minotaur IV+,1,0
+Minotaur V,1,0
+Molniya 8K78,40,20
+Molniya 8K78M,272,13
+Molniya 8K78M-PVB,8,0
+Mu-3C,4,1
+Mu-3H,3,0
+Mu-3S,4,0
+Mu-3S-II,8,1
+Mu-4S,4,1
+N-1,7,1
+N-1 11A52,4,4
+N-2,8,0
+Naro-1,3,2
+Nike Cajun,4,0
+Paektusan 1,1,1
+Pegasus,4,0
+Pegasus H,4,0
+Pegasus XL,27,3
+Pegasus XL/HAPS,6,0
+Pegasus/HAPS,2,1
+Project Pilot,6,6
+Proton-K,29,3
+Proton-K/17S40,6,0
+Proton-K/Briz-M,4,1
+Proton-K/D,37,14
+Proton-K/D-1,12,1
+Proton-K/D-2,3,0
+Proton-K/DM,66,5
+Proton-K/DM-2,110,7
+Proton-K/DM-2M,41,2
+Proton-M/Briz-M,89,8
+Proton-M/DM-2,6,0
+Proton-M/DM-3,3,2
+PSLV,23,2
+PSLV-XL,16,0
+R-36O 8K69,21,1
+R-36O 8K69M,2,0
+Rokot,27,3
+Safir,7,3
+Saturn I,6,0
+Saturn IB,7,0
+Saturn V,13,0
+Scout A,11,0
+Scout A-1,1,0
+Scout B,23,2
+Scout B-1,5,0
+Scout D-1,16,0
+Scout E-1,1,0
+Scout F-1,2,1
+Scout G-1,17,0
+Scout X-1,6,2
+Scout X-2,2,1
+Scout X-2B,1,1
+Scout X-2M,3,2
+Scout X-3,5,1
+Scout X-3A,1,0
+Scout X-3M,1,0
+Scout X-4,12,1
+Scout X-4A,2,0
+Shaviyt,2,0
+Shaviyt 1,8,2
+Shtil'-1,2,0
+SLV-3,4,1
+Soyuz 11A510,2,0
+Soyuz 11A511,32,2
+Soyuz 11A511L,3,0
+Soyuz 11A511M,8,0
+Soyuz-2-1A,24,2
+Soyuz-2-1B,22,1
+Soyuz-2-1V,2,1
+Soyuz-FG,59,0
+Soyuz-ST-A,5,0
+Soyuz-ST-B,12,1
+Soyuz-U,633,18
+Soyuz-U-PVB,154,4
+Soyuz-U2,72,0
+Space Shuttle,135,1
+SPARTA,1,0
+Sputnik 11A59,2,0
+Sputnik 8A91,2,1
+Sputnik 8K71PS,2,0
+SS-520,1,1
+Start,1,1
+Start-1,5,0
+Start-1.2,1,0
+Strela,3,0
+Super Strypi,1,1
+Taurus 1110,1,0
+Taurus 2110,2,1
+Taurus 2210,1,0
+Taurus 3110,2,2
+Taurus 3210,1,0
+Thor Able I,3,2
+Thor Able II,2,1
+Thor Able III,1,0
+Thor Able IV,1,0
+Thor Ablestar,19,5
+Thor Agena A,15,6
+Thor Agena B,40,7
+Thor Agena D,13,2
+Thor Burner 1,4,1
+Thor Burner 2,12,0
+Thor Burner 2A,8,0
+Thor Delta,12,1
+Thor Delta A,2,0
+Thor Delta B,9,1
+Thor Delta C,10,2
+Thor Delta C1,3,0
+Thor Delta D,2,0
+Thor Delta E,6,0
+Thor Delta E1,17,1
+Thor Delta G,2,0
+Thor Delta J,1,0
+Thor Delta L,2,1
+Thor Delta M,12,2
+Thor Delta M6,1,0
+Thor Delta N,6,1
+Thor Delta N6,3,1
+Thor DSV-2U,5,1
+Thor MG-18,2,0
+Thor SLV-2 Agena B,3,0
+Thor SLV-2 Agena D,8,2
+Thor SLV-2A Agena B,2,0
+Thor SLV-2A Agena D,61,4
+Thorad SLV-2G Agena D,30,1
+Thorad SLV-2H Agena D,13,1
+Titan 23B,9,0
+Titan 24B,23,2
+Titan 33B,3,1
+Titan 34B,11,0
+Titan 34D,7,2
+Titan 34D/IUS,1,0
+Titan 34D/Transtage,7,0
+Titan 401A/Centaur,9,1
+Titan 401B/Centaur,7,1
+Titan 402A/IUS,3,0
+Titan 402B/IUS,5,1
+Titan 403A,5,1
+Titan 403B,1,0
+Titan 404A,3,0
+Titan 404B,3,0
+Titan 405A,2,0
+Titan 405B,1,0
+Titan II GLV,12,0
+Titan II SLV,13,1
+Titan IIIA,4,1
+Titan IIIB,22,1
+Titan IIIC,36,2
+Titan IIID,22,0
+Titan IIIE,7,1
+Trailblazer 1,1,0
+Trailblazer 2,3,0
+Tsiklon-2,105,2
+Tsiklon-2A,8,1
+Tsiklon-3,122,7
+Unha-2,1,1
+Unha-3,2,1
+Uprated Saturn I,2,0
+UR-500,4,1
+UR-500K/Blok D,1,0
+Vanguard,11,8
+Vega,9,0
+VLS-1,2,2
+Volna,1,1
+Voskhod 11A57,299,13
+Vostok 8A92,44,4
+Vostok 8A92M,93,1
+Vostok 8K72,4,1
+Vostok 8K72K,13,2
+Vostok-L 8K72,9,6
+Zenit-2,35,6
+Zenit-2 11K77.05,1,1
+Zenit-2M,1,0
+Zenit-2SB,1,0
+Zenit-3SL,36,3
+Zenit-3SLB,6,0
+Zenit-3SLBF,3,0
