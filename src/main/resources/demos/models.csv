@@ -6,5 +6,5 @@ rockets,Hierarchical model for rocket launch failure counts,hier.HierarchicalRoc
 ariane,The rockets model on the Ariane rockets subset,hier.HierarchicalRockets,--model.data data/failure_counts.csv --model.rocketTypes.name LV.Type --model.filter Ariane
 discrete,Discrete multi-modal problem,demos.DiscreteMultimodal,
 normal,Independent and identically distributed normal random variables,demos.AnnealedMVN,
-magnetic-critical,Ising model under a magnetic field,blang.validation.internals.fixtures.Ising,--model.moment 0.1
+magnetic,Ising model under a magnetic field,blang.validation.internals.fixtures.Ising,--model.moment 0.1
 Ising-supercritical,Classical Ising model past the critical point,blang.validation.internals.fixtures.Ising,--model.beta 1
