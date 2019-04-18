@@ -1,7 +1,7 @@
 package demos
 
 model DiscreteMultimodal {
-  param Integer k ?: 2
+  param Integer k ?: 1
   param Double a ?: 100.0
   random IntVar x ?: latentInt
   laws {

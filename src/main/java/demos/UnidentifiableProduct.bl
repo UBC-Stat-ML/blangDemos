@@ -1,0 +1,13 @@
+package demos
+
+model UnidentifiableProduct {
+  random RealVar x ?: latentReal
+  random RealVar y ?: latentReal
+  param IntVar nTrials ?: 100000
+  random IntVar nFails ?: nTrials/2
+  laws {
+    x ~ ContinuousUniform(0.0, 1.0)
+    y ~ ContinuousUniform(0.0, 1.0)
+    nFails | nTrials, x, y ~ Binomial(nTrials, x * y)
+  }
+}

@@ -8,3 +8,4 @@ discrete,Discrete multi-modal problem,demos.DiscreteMultimodal,
 normal,Independent and identically distributed normal random variables,demos.AnnealedMVN,
 magnetic,Ising model under a magnetic field,blang.validation.internals.fixtures.Ising,--model.moment 0.1
 Ising-supercritical,Classical Ising model past the critical point,blang.validation.internals.fixtures.Ising,--model.beta 1
+product,Synthetic unidentifiable unimodal problem,demos.UnidentifiableProduct,
