@@ -10,3 +10,4 @@ magnetic,Ising model under a magnetic field,blang.validation.internals.fixtures.
 Ising-supercritical,Classical Ising model past the critical point,blang.validation.internals.fixtures.Ising,--model.beta 1
 product,Synthetic unidentifiable unimodal problem,demos.UnidentifiableProduct,
 simple-mix,Mixture of two normal distributions applied to a univariate dataset,mix.SimpleMixture,--model.data file data/mixture_data.csv
+Wright-Fisher,Bridge simulation of a Wright-Fisher SDE diffusion,blang.validation.internals.fixtures.Diffusion,--model.process NA NA NA NA NA NA NA NA NA 0.9 --model.startPoint 0.1
