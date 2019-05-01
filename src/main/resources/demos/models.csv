@@ -9,3 +9,4 @@ normal,Independent and identically distributed normal random variables,demos.Ann
 magnetic,Ising model under a magnetic field,blang.validation.internals.fixtures.Ising,--model.moment 0.1
 Ising-supercritical,Classical Ising model past the critical point,blang.validation.internals.fixtures.Ising,--model.beta 1
 product,Synthetic unidentifiable unimodal problem,demos.UnidentifiableProduct,
+simple-mix,Mixture of two normal distributions applied to a univariate dataset,mix.SimpleMixture,--model.data file data/mixture_data.csv

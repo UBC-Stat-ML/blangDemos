@@ -1,0 +1,25 @@
+package mix
+
+model SimpleMixture {
+  param Integer K ?: 2
+  random List<RealVar> data
+  random Simplex pi ?: latentSimplex(K)
+  random List<IntVar> indicators ?: latentIntList(data.size)
+  random List<RealVar> means ?: latentRealList(K)
+  random List<RealVar> sds ?: latentRealList(K)
+  
+  laws {
+    pi | K ~ SimplexUniform(K)
+    
+    for (int k : 0 ..< K) {
+      means.get(k) ~ Normal(150.0, pow(100, 2.0))
+      sds.get(k) ~ ContinuousUniform(0.0, 100.0)
+    }
+    
+    for (int n : 0 ..< data.size) {
+      indicators.get(n) | pi ~ Categorical(pi)
+      data.get(n) | means, sds, IntVar indic = indicators.get(n)  
+        ~ Normal(means.get(indic), pow(sds.get(indic), 2.0))
+    }
+  }
+}
