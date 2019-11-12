@@ -1,0 +1,17 @@
+package demos
+import conifer.*
+import static conifer.Utils.*
+
+model PhylogeneticTree {
+  random RealVar shape ?: latentReal, rate ?: latentReal
+  random SequenceAlignment observations
+  random UnrootedTree tree ?: unrootedTree(observations.observedTreeNodes)
+  param EvolutionaryModel evoModel ?: kimura(observations.nSites)
+
+  laws {
+    shape ~ Exponential(1.0)
+    rate ~ Exponential(1.0)
+    tree | shape, rate ~ NonClockTreePrior(Gamma::distribution(shape, rate))
+    observations | tree, evoModel ~ UnrootedTreeLikelihood(tree, evoModel)
+  }
+}
