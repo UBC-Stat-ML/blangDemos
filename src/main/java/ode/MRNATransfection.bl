@@ -1,0 +1,44 @@
+package ode
+
+//import blang.types.internals.SimplePlate
+
+model MRNATransfection {
+  
+  param GlobalDataSource data
+  
+  random RealVar
+    km0 ?: latentReal,
+    delta ?: latentReal,
+    beta ?: latentReal,
+    t0 ?: latentReal,
+    sigma ?: latentReal
+    
+  param Plate<Double> times 
+//  ?: {
+//    val defaultMaxObsIndex = 51
+//    val defaultInterval = 10.0
+//    return new SimplePlate("times", (0 .. defaultMaxObsIndex).map[defaultInterval * it / defaultMaxObsIndex].toSet)
+//  }
+  
+  random Plated<RealVar> observations 
+  
+  laws {
+    
+    t0 ~ LogUniform(-2.0, 1.0, 10.0)
+    km0 ~ LogUniform(-5.0, 5.0, 10.0)
+    beta ~ LogUniform(-5.0, 5.0, 10.0)
+    delta ~ LogUniform(-5.0, 5.0, 10.0)
+    sigma ~ LogUniform(-2.0, 2.0, 10.0)
+    
+    for (Index<Double> time : times.indices) {
+      observations.get(time) | Double t = time.key, km0, delta, beta, t0, sigma ~ Normal({
+        val mean = km0 / (delta - beta) * (1.0 - exp(-(delta - beta) * (t - t0))) * exp(-beta*(t - t0))
+        if (mean.isNaN || mean == Double.NEGATIVE_INFINITY || mean == Double.POSITIVE_INFINITY)
+          return 10_000 // hack: priors too vague but keeping them for replication
+        return mean
+      }, 
+      sigma * sigma)   
+    }
+    
+  }
+}
