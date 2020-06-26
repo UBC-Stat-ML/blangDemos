@@ -11,7 +11,7 @@ targetCompatibility = '1.8'
 
 dependencies {
   xtextLanguages "ca.ubc.stat.blang:ca.ubc.stat.blang:3.25.3"
-  compile group: 'ca.ubc.stat', name: 'blangSDK', version: '1.31.1'
+  compile group: 'ca.ubc.stat', name: 'blangSDK', version: '2.6.1'
   compile group: 'ca.ubc.stat', name: 'inits', version: '2.18.1'
   compile group: 'ca.ubc.stat', name: 'conifer', version: '2.0.4'
 }
