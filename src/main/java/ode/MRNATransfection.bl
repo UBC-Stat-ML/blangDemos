@@ -1,7 +1,5 @@
 package ode
 
-//import blang.types.internals.SimplePlate
-
 model MRNATransfection {
   
   param GlobalDataSource data
@@ -14,11 +12,6 @@ model MRNATransfection {
     sigma ?: latentReal
     
   param Plate<Double> times 
-//  ?: {
-//    val defaultMaxObsIndex = 51
-//    val defaultInterval = 10.0
-//    return new SimplePlate("times", (0 .. defaultMaxObsIndex).map[defaultInterval * it / defaultMaxObsIndex].toSet)
-//  }
   
   random Plated<RealVar> observations 
   

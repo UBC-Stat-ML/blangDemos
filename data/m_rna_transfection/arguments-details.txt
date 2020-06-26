@@ -1,0 +1,131 @@
+# --checkIsDAG <boolean> (default value: true)
+
+  --engine FORWARD    # <PosteriorInferenceEngine: SCM|PT|Forward|Exact|None|fully qualified> (default value: PT)
+
+# --engine.nSamples <int> (default value: 1)
+
+# --engine.random <Random> (default value: 1)
+
+# --excludeFromOutput <List: Space separated items or "file <path>" to load from newline separated file> (optional)
+
+# --experimentConfigs.configFile <File> (optional)
+#   description: If set, use those arguments in provided file that do not appear in the provided arguments.
+
+# --experimentConfigs.description <String> (optional)
+#   description: Documentation for this run.
+
+# --experimentConfigs.managedExecutionFolder <boolean> (default value: true)
+#   description: Automatically organize results into subdirectories of 'results/all'?
+
+# --experimentConfigs.maxIndentationToPrint <int> (default value: inf)
+#   description: Use -1 to silence all output
+
+# --experimentConfigs.recordExecutionInfo <boolean> (default value: true)
+#   description: Record information such as timing, main class, code version, etc for this run?
+
+# --experimentConfigs.recordGitInfo <boolean> (default value: true)
+
+# --experimentConfigs.saveStandardStreams <boolean> (default value: true)
+#   description: Save combined standard out and err into a file?
+
+# --experimentConfigs.tabularWriter <TabularWriterFactory: CSV|Spark|fully qualified> (default value: CSV)
+
+# --initRandom <Random> (default value: 1)
+
+  --model ode.MRNATransfection$Builder    # <ModelBuilder: fully qualified>
+
+  --model.beta 0.8    # <RealVar: A number or NA> (optional)
+
+# --model.data <GlobalDataSource: Path to the DataSource.>
+
+# --model.data.reader <DataSourceReader: CSV|fully qualified> (default value: CSV)
+
+# --model.data.reader.commentCharacter <Character> (optional)
+
+# --model.data.reader.ignoreLeadingWhiteSpace <boolean> (default value: true)
+
+# --model.data.reader.separator <char> (default value: ,)
+
+# --model.data.reader.strictQuotes <boolean> (default value: false)
+
+  --model.delta 0.2    # <RealVar: A number or NA> (optional)
+
+  --model.km0 5    # <RealVar: A number or NA> (optional)
+
+# --model.observations.dataSource <DataSource: Path to the DataSource.>
+
+# --model.observations.dataSource.reader <DataSourceReader: CSV|fully qualified> (default value: CSV)
+
+# --model.observations.dataSource.reader.commentCharacter <Character> (optional)
+
+# --model.observations.dataSource.reader.ignoreLeadingWhiteSpace <boolean> (default value: true)
+
+# --model.observations.dataSource.reader.separator <char> (default value: ,)
+
+# --model.observations.dataSource.reader.strictQuotes <boolean> (default value: false)
+
+# --model.observations.name <ColumnName> (optional)
+#   description: Name of variable in the plate
+
+  --model.sigma 0.1    # <RealVar: A number or NA> (optional)
+
+  --model.t0 2    # <RealVar: A number or NA> (optional)
+
+# --model.times.dataSource <DataSource: Path to the DataSource.> (a parent is optional)
+
+# --model.times.dataSource.reader <DataSourceReader: CSV|fully qualified> (a parent is optional)
+
+# --model.times.dataSource.reader.commentCharacter <Character> (optional)
+
+# --model.times.dataSource.reader.ignoreLeadingWhiteSpace <boolean> (a parent is optional)
+
+# --model.times.dataSource.reader.separator <char> (a parent is optional)
+
+# --model.times.dataSource.reader.strictQuotes <boolean> (a parent is optional)
+
+# --model.times.maxSize <Integer> (optional)
+
+# --model.times.name <ColumnName> (optional)
+
+# --postProcessor <PostProcessor: DefaultPostProcessor|NoPostProcessor|fully qualified> (default value: NoPostProcessor)
+
+# --postProcessor.blangExecutionDirectory <File> (optional)
+#   description: When called from Blang, this will be the latest run, otherwise point to the .exec folder created by Blang
+
+# --postProcessor.experimentConfigs.configFile <File> (optional)
+#   description: If set, use those arguments in provided file that do not appear in the provided arguments.
+
+# --postProcessor.experimentConfigs.description <String> (optional)
+#   description: Documentation for this run.
+
+# --postProcessor.experimentConfigs.managedExecutionFolder <boolean> (default value: true)
+#   description: Automatically organize results into subdirectories of 'results/all'?
+
+# --postProcessor.experimentConfigs.maxIndentationToPrint <int> (default value: inf)
+#   description: Use -1 to silence all output
+
+# --postProcessor.experimentConfigs.recordExecutionInfo <boolean> (default value: true)
+#   description: Record information such as timing, main class, code version, etc for this run?
+
+# --postProcessor.experimentConfigs.recordGitInfo <boolean> (default value: true)
+
+# --postProcessor.experimentConfigs.saveStandardStreams <boolean> (default value: true)
+#   description: Save combined standard out and err into a file?
+
+# --postProcessor.experimentConfigs.tabularWriter <TabularWriterFactory: CSV|Spark|fully qualified> (default value: CSV)
+
+# --printAccessibilityGraph <boolean> (default value: false)
+
+# --samplers.additional <SamplerSet: Fully qualified instances of blang.mcmc.Sampler>
+#   description: Samplers to be added.
+
+# --samplers.excluded <SamplerSet: Fully qualified instances of blang.mcmc.Sampler>
+#   description: Samplers to be excluded (only useful if useAnnotation = true).
+
+# --samplers.useAnnotation <boolean> (default value: true)
+#   description: If the arguments of the annotations @Samplers should be used to determine a starting set of sampler types.
+
+# --stripped <boolean> (default value: false)
+#   description: Stripped means that the construction of forward simulators and annealers is skipped
+
+# --treatNaNAsNegativeInfinity <boolean> (default value: false)

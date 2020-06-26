@@ -1,0 +1,9 @@
+Preprocess {
+  52 samplers constructed with following prototypes:
+    RealScalar sampled via: [RealSliceSampler]
+} [ endingBlock=Preprocess blockTime=121.8ms blockNErrors=0 ]
+Inference {
+} [ endingBlock=Inference blockTime=4.958ms blockNErrors=0 ]
+Postprocess {
+  No post-processing requested. Use '--postProcessor DefaultPostProcessor' or run after the fact using 'postprocess --help'
+} [ endingBlock=Postprocess blockTime=863.3μs blockNErrors=0 ]
