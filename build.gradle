@@ -1,6 +1,6 @@
 plugins {
-  id 'org.xtext.xtend' version '2.0.4'
-  id 'org.xtext.builder' version '2.0.4'
+  id 'org.xtext.xtend' version '2.0.5'
+  id 'org.xtext.builder' version '2.0.5'
   id 'java'
   id 'eclipse'
   id 'application'
@@ -9,10 +9,10 @@ plugins {
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
+def blangVersion = '4.0.1' 
 dependencies {
-  xtextLanguages "ca.ubc.stat.blang:ca.ubc.stat.blang:3.25.3"
-  compile group: 'ca.ubc.stat', name: 'blangSDK', version: '2.6.1'
-  compile group: 'ca.ubc.stat', name: 'inits', version: '2.18.1'
+  xtextLanguages "com.github.UBC-Stat-ML.blangDSL:ca.ubc.stat.blang:${blangVersion}"
+  compile group: 'com.github.UBC-Stat-ML', name: 'blangSDK', version: '2.9.2'
   compile group: 'ca.ubc.stat', name: 'conifer', version: '2.0.4'
 }
 
@@ -30,12 +30,10 @@ xtext {
 repositories {
   mavenCentral()
   jcenter()
-  maven {
-    url "https://www.stat.ubc.ca/~bouchard/maven/"
-  }
-  maven {
-    url "http://www.biojava.org/download/maven/"
-  }
+  maven { url "file:///${System.properties['user.home']}/artifacts/" }
+  maven { url 'https://jitpack.io' }
+  maven { url "https://ubc-stat-ml.github.io/artifacts/" }
+  maven { url "https://www.stat.ubc.ca/~bouchard/maven/" }
 }
 
 xtend {

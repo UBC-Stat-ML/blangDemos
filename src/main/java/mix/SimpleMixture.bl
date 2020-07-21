@@ -6,6 +6,7 @@ model SimpleMixture {
   random Simplex pi ?: latentSimplex(K)
   random List<IntVar> indicators ?: latentIntList(data.size)
   random List<RealVar> means ?: latentRealList(K)
+  random RealVar firstComponentMean ?: means.get(0)
   random List<RealVar> sds ?: latentRealList(K)
   
   laws {

@@ -1,0 +1,30 @@
+package demos
+
+import briefj.collections.UnorderedPair
+import static blang.validation.internals.fixtures.Functions.squareIsingEdges
+
+model XY {
+  
+  param Double beta ?: 2.0
+  param Integer N ?: 5
+  random List<RealVar> vertices ?: latentRealList(N*N)
+  
+  laws {
+    // Pairwise potentials
+    for (UnorderedPair<Integer, Integer> pair : squareIsingEdges(N)) {
+      | RealVar first  = vertices.get(pair.getFirst), 
+        RealVar second = vertices.get(pair.getSecond),
+        beta
+      ~ LogPotential(
+          if ((first < -PI || first > PI || second < -PI || second > PI))
+            return NEGATIVE_INFINITY
+          else
+            return cos(first - second)) 
+    }
+    
+    // Node potentials
+    for (RealVar vertex : vertices) {
+      vertex ~ ContinuousUniform(-PI, PI)
+    }
+  }
+}

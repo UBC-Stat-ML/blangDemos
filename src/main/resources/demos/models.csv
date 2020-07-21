@@ -9,6 +9,8 @@ normal,Independent and identically distributed normal random variables,demos.Ann
 magnetic,Ising model under a magnetic field,blang.validation.internals.fixtures.Ising,--model.moment 0.1
 Ising-supercritical,Classical Ising model past the critical point,blang.validation.internals.fixtures.Ising,--model.beta 1
 product,Synthetic unidentifiable unimodal problem,demos.UnidentifiableProduct,
-simple-mix,Mixture of two normal distributions applied to a univariate dataset,mix.SimpleMixture,--model.data file data/mixture_data.csv
+simple-mix,Mixture of two normal distributions applied to a univariate dataset (300 obs),mix.SimpleMixture,--model.data file data/mixture_data.csv
 Wright-Fisher,Bridge simulation of a Wright-Fisher SDE diffusion,blang.validation.internals.fixtures.Diffusion,--model.process NA NA NA NA NA NA NA NA NA 0.9 --model.startPoint 0.1
 PhylogeneticTree, bayesian phylogenetic inference,demos.PhylogeneticTree,--model.observations.file data/primates.fasta --model.observations.encoding DNA --postProcessor DefaultPostProcessor
+simple-mix-150,Mixture of two normal distributions applied to a univariate dataset (150 obs),mix.SimpleMixture,--model.data file data/mixture_data_150.csv
+xy,The 2d XY model,demos.XY,
