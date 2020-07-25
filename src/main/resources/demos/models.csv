@@ -1,5 +1,5 @@
 name,description,class,arguments
-titanic,Spike and Slab classification on the Titanic passengers dataset,glms.SpikeSlabClassification,--model.data data/titanic/titanic-covariates.csv --model.instances.name Name --model.instances.maxSize 200 --model.labels.dataSource data/titanic/titanic.csv --model.labels.name Survived --postProcessor DefaultPostProcessor
+titanic,Spike and Slab classification on the Titanic passengers dataset,glms.SpikeSlabClassification,--model.data data/titanic/titanic-covariates.csv --model.instances.name Name --model.instances.maxSize 200 --model.labels.dataSource data/titanic/titanic.csv --model.labels.name Survived
 elliptic,Synthetic unidentifiable and multimodal problem built from an elliptic curve,demos.UnidentifiableEllipticCurve,
 Ising-critical,Classical Ising model at the critical point,blang.validation.internals.fixtures.Ising,
 rockets,Hierarchical model for rocket launch failure counts,hier.HierarchicalRockets,--model.data data/failure_counts.csv --model.rocketTypes.name LV.Type
@@ -11,7 +11,7 @@ Ising-supercritical,Classical Ising model past the critical point,blang.validati
 product,Synthetic unidentifiable unimodal problem,demos.UnidentifiableProduct,
 simple-mix,Mixture of two normal distributions applied to a univariate dataset (300 obs),mix.SimpleMixture,--model.data file data/mixture_data.csv
 Wright-Fisher,Bridge simulation of a Wright-Fisher SDE diffusion,blang.validation.internals.fixtures.Diffusion,--model.process NA NA NA NA NA NA NA NA NA 0.9 --model.startPoint 0.1
-PhylogeneticTree, bayesian phylogenetic inference,demos.PhylogeneticTree,--model.observations.file data/primates.fasta --model.observations.encoding DNA --postProcessor DefaultPostProcessor
+PhylogeneticTree, bayesian phylogenetic inference,demos.PhylogeneticTree,--model.observations.file data/primates.fasta --model.observations.encoding DNA
 simple-mix-150,Mixture of two normal distributions applied to a univariate dataset (150 obs),mix.SimpleMixture,--model.data file data/mixture_data_150.csv
 xy,The 2d XY model,demos.XY,
 transfection,ODE modelling mRNA transfection,ode.MRNATransfection,--model.data data/m_rna_transfection/processed.csv
