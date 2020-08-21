@@ -1,0 +1,25 @@
+package glms
+
+import bayonet.math.NumericalUtils
+
+model Challenger {
+  random RealVar intercept ?: latentReal
+  random RealVar slope ?: latentReal
+  random List<IntVar> incidents
+  param List<RealVar> temperatures
+  
+  laws {
+    intercept ~ Normal(0.0, 100.0)
+    slope ~ Normal(0.0, 100.0)
+    
+    for (int i : 0 ..< incidents.size) {
+      incidents.get(i) | RealVar temperature = temperatures.get(i), intercept, slope 
+        ~ Bernoulli({
+          val result = logistic(intercept + slope * temperature)
+          if (result === 0.0) return NumericalUtils::THRESHOLD
+          if (result === 1.0) return 1.0 - NumericalUtils::THRESHOLD
+          return result
+        })
+    }
+  }
+}

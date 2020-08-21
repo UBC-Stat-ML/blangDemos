@@ -1,0 +1,23 @@
+package texting
+
+model ChangePoint {
+  random IntVar changePoint ?: latentInt
+  random RealVar lambda1 ?: latentReal, lambda2 ?: latentReal
+  random List<IntVar> counts 
+  
+  laws {
+    changePoint | int size = counts.size ~ DiscreteUniform(0, size)
+    lambda1 ~ Exponential(1.0/15.0)
+    lambda2 ~ Exponential(1.0/15.0)
+    for (Integer position : 0 ..< counts.size) {
+      counts.get(position) | lambda1, lambda2, changePoint, position 
+        ~ Poisson( 
+          if (position <= changePoint) {
+            lambda1 
+          } else { 
+            lambda2
+          }
+        )
+    }
+  }
+}

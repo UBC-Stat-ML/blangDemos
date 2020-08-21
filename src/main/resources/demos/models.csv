@@ -11,7 +11,9 @@ Ising-supercritical,Classical Ising model past the critical point,blang.validati
 product,Synthetic unidentifiable unimodal problem,demos.UnidentifiableProduct,
 simple-mix,Mixture of two normal distributions applied to a univariate dataset (300 obs),mix.SimpleMixture,--model.data file data/mixture_data.csv
 Wright-Fisher,Bridge simulation of a Wright-Fisher SDE diffusion,blang.validation.internals.fixtures.Diffusion,--model.process NA NA NA NA NA NA NA NA NA 0.9 --model.startPoint 0.1
-PhylogeneticTree, bayesian phylogenetic inference,demos.PhylogeneticTree,--model.observations.file data/primates.fasta --model.observations.encoding DNA
+PhylogeneticTree,Bayesian phylogenetic inference,demos.PhylogeneticTree,--model.observations.file data/primates.fasta --model.observations.encoding DNA
 simple-mix-150,Mixture of two normal distributions applied to a univariate dataset (150 obs),mix.SimpleMixture,--model.data file data/mixture_data_150.csv
 xy,The 2d XY model,demos.XY,
 transfection,ODE modelling mRNA transfection,ode.MRNATransfection,--model.data data/m_rna_transfection/processed.csv
+PhylogeneticTreeLarger,Bayesian phylogenetic inference,demos.PhylogeneticTree,--model.observations.file data/FES_8.g.fasta --model.observations.encoding DNA
+chromobreak,Single cell copy number inference,chromobreak.SingleCell,--model.data.source data/chromo/gc.csv --model.data.gcContents.name value --model.data.readCounts.name value --model.data.readCounts.dataSource data/chromo/7.csv --postProcessor chromobreak.ChromoPostProcessor --model.configs.annealingStrategy Exponentiation --model.configs.annealingStrategy.thinning 1

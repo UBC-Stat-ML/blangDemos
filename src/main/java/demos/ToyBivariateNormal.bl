@@ -1,0 +1,14 @@
+package demos
+
+// Assume correlation never changes
+model ToyBivariateNormal {
+  param RealVar correlation ?: 0.5
+  random Matrix realization ?: latentVector(2)
+  
+  laws {
+    realization | 
+      Matrix zero = dense(2).readOnlyView,
+      CholeskyDecomposition fixedPrecision = (denseCopy(#[#[1, -correlation], #[-correlation, 1]]) / (1.0 - pow(correlation, 2))).cholesky  
+      ~ MultivariateNormal(zero, fixedPrecision) 
+  }
+}
