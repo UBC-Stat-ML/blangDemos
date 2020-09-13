@@ -180,7 +180,7 @@ public class StochasticOptimizedPT extends PT {
   @Override
   public void setSampledModel(SampledModel model) 
   {
-    nChains = Optional.of(1);
+    nChains = 1;
     initialize(model, random);
     initSerializers();  
   }
