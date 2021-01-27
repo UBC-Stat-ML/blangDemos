@@ -1,0 +1,21 @@
+package hier
+
+model CollapsedHierarchicalRockets {
+  param GlobalDataSource data
+  param String filter ?: ""
+  param Plate<String> rocketTypes
+  param Plated<IntVar> numberOfLaunches
+  random Plated<IntVar> numberOfFailures
+  random RealVar m ?: latentReal, s ?: latentReal
+  
+  laws {
+    m ~ ContinuousUniform(0, 1)
+    s ~ Exponential(0.1)
+    for (Index<String> rocketType : rocketTypes.indices.filter[key.startsWith(filter)]) {
+      numberOfFailures.get(rocketType)
+        | m, s,
+          IntVar numberOfLaunch = numberOfLaunches.get(rocketType)
+        ~ BetaBinomial(numberOfLaunch, m*s, (1.0 - m)*s)
+    }
+  }
+}

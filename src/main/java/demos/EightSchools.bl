@@ -1,0 +1,23 @@
+package demos
+
+model EightSchools {
+  param GlobalDataSource data
+  param Plate<String> schools
+  
+  random RealVar mu ?: latentReal
+  random RealVar tau ?: latentReal
+  random Plated<RealVar> thetas 
+  random Plated<RealVar> ys
+  random Plated<RealVar> sigmas
+  
+  laws {
+    
+    mu ~ Normal(0, 5 * 5)
+    tau ~ HalfStudentT(1, 5)
+    
+    for (Index<String> school : schools.indices) {
+      thetas.get(school) | mu, tau ~ Normal(mu, tau)
+      ys.get(school) | RealVar theta = thetas.get(school), RealVar sigma = sigmas.get(school) ~ Normal(theta, sigma * sigma)
+    }
+  }
+}
