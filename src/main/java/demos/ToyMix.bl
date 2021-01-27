@@ -1,5 +1,7 @@
 package demos
 
+import bayonet.math.NumericalUtils
+
 model ToyMix {
   random RealVar x ?: latentReal
   
@@ -7,12 +9,14 @@ model ToyMix {
     x ~ Normal(0.0, 1.0)
     
     | x, 
+      double log2 = log(2.0),
       RealDistribution std = Normal::distribution(0.0, 1.0),
       RealDistribution c1 = Normal::distribution(-1.0, 0.01), 
       RealDistribution c2 = Normal::distribution(1.0, 0.01) 
       ~ LogPotential(
-          log(0.5*exp(c1.logDensity(x)) + 
-              0.5*exp(c2.logDensity(x))
+          NumericalUtils::logAdd(
+            c1.logDensity(x) - log2, 
+            c2.logDensity(x) - log2
           ) - std.logDensity(x)
       )
   }
