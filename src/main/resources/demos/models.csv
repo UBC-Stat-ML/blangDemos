@@ -17,3 +17,4 @@ xy,The 2d XY model,demos.XY,
 transfection,ODE modelling mRNA transfection,ode.MRNATransfection,--model.data data/m_rna_transfection/processed.csv
 PhylogeneticTreeLarger,Bayesian phylogenetic inference,demos.PhylogeneticTree,--model.observations.file data/FES_8.g.fasta --model.observations.encoding DNA
 chromobreak,Single cell copy number inference,chromobreak.SingleCell,--model.data.source data/chromo/gc.csv --model.data.gcContents.name value --model.data.readCounts.name value --model.data.readCounts.dataSource data/chromo/7.csv --postProcessor chromobreak.ChromoPostProcessor --model.configs.annealingStrategy Exponentiation --model.configs.annealingStrategy.thinning 1
+toymix,Toy mixture model,demos.ToyMix,
