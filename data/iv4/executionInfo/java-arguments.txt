@@ -1,0 +1,1 @@
+--model.individuals.maxSize 10000 --model.alpha_w 0.0 --model.alpha_e 0.0 --model.beta_qe 1.0 --model.beta_ew 0.0 --model.sigma_e 4.0 --model.sigma_w 4.0 --engine Forward --model demos.IVModel$Builder

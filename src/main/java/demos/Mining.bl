@@ -1,0 +1,20 @@
+package demos
+
+model Mining {
+  
+  random RealVar e ?: latentReal
+  random RealVar l ?: latentReal
+  random IntVar s ?: latentInt
+  random List<IntVar> counts
+  
+  laws {
+    
+    e ~ Exponential(1.0)
+    l ~ Exponential(1.0)
+    s | int size = counts.size ~ DiscreteUniform(0, size)
+    
+    for (int t : 0 ..< counts.size) {
+      counts.get(t) | t, e, l, s ~ Poisson(if (t <= s) e else l)
+    }
+  }
+} 

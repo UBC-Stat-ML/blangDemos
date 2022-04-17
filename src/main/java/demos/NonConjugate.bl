@@ -1,0 +1,15 @@
+package demos
+
+model NonConjugate {
+  random RealVar Pi ?: latentReal
+  random IntVar Y ?: 51
+  
+  laws { 
+    Pi ~ Normal(0.0, 1.0)
+      
+    Y | Pi ~ Binomial(8197, {
+      if (Pi <= 0.0 || Pi >= 1.0) invalidParameter
+      return Pi
+    })   
+  }
+}

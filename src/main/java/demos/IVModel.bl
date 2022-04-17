@@ -1,0 +1,39 @@
+package demos
+
+model IVModel {
+  param GlobalDataSource data
+  param Plate<Integer> individuals
+  
+  random RealVar 
+    alpha_w ?: latentReal,
+    beta_ew ?: latentReal,
+    alpha_e ?: latentReal,
+    sigma_e ?: latentReal,
+    sigma_w ?: latentReal,
+    beta_qe ?: latentReal
+  
+  random Plated<RealVar> ws, es, us
+  random Plated<IntVar> qs
+  
+  laws {
+    
+    alpha_w ~ Normal(0, 10.0)
+    beta_ew ~ Normal(0, 10.0)
+    alpha_e ~ Normal(0, 10.0)
+    beta_qe ~ Normal(0, 10.0)
+    
+    sigma_e ~ Exponential(1)
+    sigma_w ~ Exponential(1)
+    
+    for (Index<Integer> i : individuals.indices) {
+      
+      us.get(i) ~ Normal(0, 1)
+      qs.get(i) ~ Bernoulli(0.25)
+      
+      es.get(i) | alpha_e, beta_qe, sigma_e, IntVar q = qs.get(i), RealVar u = us.get(i)  ~ Normal(alpha_e + beta_qe * q + u, pow(sigma_e, 2))
+      ws.get(i) | alpha_w, beta_ew, sigma_w, RealVar e = es.get(i), RealVar u = us.get(i)  ~ Normal(alpha_w + beta_ew * e + u, pow(sigma_w, 2))
+      
+    }
+    
+  }
+}

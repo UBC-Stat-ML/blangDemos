@@ -1,0 +1,26 @@
+package demos
+
+model HierarchicalVaccines {
+  
+  random RealVar a ?: latentReal
+  random RealVar b ?: latentReal
+  
+  random RealVar Pi_1 ?: latentReal
+  random RealVar Pi_2 ?: latentReal
+  
+  random IntVar Y_1 ?: 51
+  random IntVar Y_2 ?: 1
+  
+  laws {
+    
+    a ~ Beta(1.0, 1.0)
+    b ~ Beta(1.0, 1.0)
+    
+    Pi_1 | a, b ~ Beta(a, b)
+    Pi_2 | a, b ~ Beta(a, b)
+    
+    Y_1 | Pi_1 ~ Binomial(8197, Pi_1)
+    Y_2 | Pi_2 ~ Binomial(120, Pi_2)
+    
+  }
+}

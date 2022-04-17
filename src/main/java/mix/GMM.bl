@@ -1,0 +1,25 @@
+package mix
+
+model GMM {
+    param GlobalDataSource data
+    param IntVar K ?: 2
+    random Simplex pi ?: latentSimplex(K)
+    param Plate<Integer> entries
+    random Plated<IntVar> z
+    random Plated<RealVar> x
+
+    param Plate<Integer> components ?: Plate.ofIntegers("components", K) 
+    random Plated<RealVar> mu
+    
+    laws {
+      pi | K ~ SymmetricDirichlet(K, 1.0)
+      for (Index<Integer> k : components.indices) {
+        mu.get(k) ~ Normal(0, 10)
+      }
+      for (Index<Integer> n : entries.indices) {
+        z.get(n) | pi ~ Categorical(pi)
+        x.get(n) | IntVar indic = z.get(n), List<RealVar> muList = mu.asList(components) 
+         ~ Normal(muList.get(indic), 1.0) 
+      }
+    }
+  }

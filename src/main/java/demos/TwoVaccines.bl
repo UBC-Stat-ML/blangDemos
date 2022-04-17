@@ -1,0 +1,20 @@
+package demos
+
+model TwoVaccines {
+  
+  random RealVar Pi_1 ?: latentReal
+  random RealVar Pi_2 ?: latentReal
+  
+  random IntVar Y_1 ?: 51
+  random IntVar Y_2 ?: 1
+  
+  laws {
+    
+    Pi_1 ~ Beta(1.0, 1.0)
+    Pi_2 ~ Beta(1.0, 1.0)
+    
+    Y_1 | Pi_1 ~ Binomial(8197, Pi_1)
+    Y_2 | Pi_2 ~ Binomial(120, Pi_2)
+    
+  }
+}

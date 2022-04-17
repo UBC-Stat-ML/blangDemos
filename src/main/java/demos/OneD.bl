@@ -1,0 +1,15 @@
+package demos
+
+model OneD {
+  
+  random RealVar x ?: latentReal
+  
+  laws {
+    
+    x ~ ContinuousUniform(-4, 4)
+    
+    | x ~ LogPotential(log(0.4 * exp(-0.5*pow(x+2,2)/0.1) + 0.2 * exp(-0.5*pow(x,2)/0.1) + 0.4 * exp(-0.5*pow(x-2,2)/0.1)))
+    
+    
+  }
+}
