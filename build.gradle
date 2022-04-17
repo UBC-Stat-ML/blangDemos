@@ -4,6 +4,7 @@ plugins {
   id 'java'
   id 'eclipse'
   id 'application'
+  id 'maven'
 }
 
 sourceCompatibility = '1.8'
@@ -44,3 +45,40 @@ xtend {
 }
 
 mainClassName = "demos.Main"
+
+configurations.archives.with {
+  artifacts.remove artifacts.find { it.file =~ 'tar' }
+  artifacts.remove artifacts.find { it.file =~ 'zip' }
+}
+
+uploadArchives {
+  repositories {
+    mavenDeployer {
+      repository(url: "file:///${System.properties['user.home']}/artifacts/")
+      snapshotRepository(url: "file:///${System.properties['user.home']}/artifacts/")
+      pom.version = "1.0.0" /* blang-standalone-compiler-directive - do not edit : EXTRACT_VERSION */
+      pom.artifactId = "blangDemos"
+      pom.groupId = "com.github.UBC-Stat-ML"
+    }
+  }
+}
+
+jar {
+    from { fileTree(dir: 'src/main/java', includes: [ '**/*.bl' ]) }
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+  classifier = 'sources'
+  from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+  classifier = 'javadoc'
+  from 'build/docs/javadoc'
+}
+
+artifacts {
+  archives jar
+  archives sourcesJar
+  archives javadocJar
+}
