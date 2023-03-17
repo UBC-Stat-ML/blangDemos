@@ -14,23 +14,3 @@ model AR1 {
     }
   }
 }
-
-
-//package ptbm.models
-//
-//import ptbm.VariationalReal
-//
-//model AR1 {
-//  param RealVar psi ?: 1.01
-//  param Plate<Integer> timeSteps
-//  
-//  random Plated<VariationalReal> variables
-//  
-//  laws {
-//    variables.get(new Index(timeSteps, 0)) ~ Opt(Normal::distribution(0, 1))
-//    for (Index<Integer> index : timeSteps.indices.filter[it.key > 0]) {
-//      variables.get(index) | RealVar previous = variables.get(new Index(timeSteps, index.key - 1)), psi
-//        ~ Opt(Normal::distribution(psi * previous, 1))
-//    }
-//  }
-//}
