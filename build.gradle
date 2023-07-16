@@ -7,6 +7,12 @@ plugins {
   id 'maven'
 }
 
+repositories.mavenCentral()
+
+dependencies {
+  compile 'org.eclipse.xtend:org.eclipse.xtend.lib:2.30.0'
+}
+
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
@@ -16,6 +22,7 @@ dependencies {
   compile group: 'com.github.UBC-Stat-ML', name: 'blangSDK', version: '2.18.1'
   compile group: 'com.github.UBC-Stat-ML', name: 'nowellpack', version: '0.0.0'
   compile group: 'com.github.UBC-Stat-ML', name: 'conifer', version: '2.1.3'
+  compile group: 'com.google.guava', name: 'guava', version: '32.1.1-jre'
 }
 
 xtext {
