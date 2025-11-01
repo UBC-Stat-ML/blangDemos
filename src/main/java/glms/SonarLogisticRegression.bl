@@ -1,0 +1,31 @@
+package glms
+
+
+model SonarLogisticRegression {
+  
+  param GlobalDataSource data
+  param Plate<String> instances, features
+  
+  param Plated<Double> covariates
+  random Plated<RealVar> betas
+  random Plated<IntVar> labels
+
+  random RealVar intercept ?: latentReal
+  
+  laws {
+    
+    intercept ~ Normal(0, 400.0)
+
+    for (Index<String> feature : features.indices) {
+      betas.get(feature) ~ Normal(0, 25.0)
+    }
+
+    for (Index<String> instance : instances.indices) {
+      labels.get(instance) | intercept, DotProduct dotProduct = DotProduct.of(features, betas, covariates.slice(instance))
+        ~ Bernoulli(logistic(intercept + dotProduct.compute))
+    }
+
+        
+    
+  }
+}
