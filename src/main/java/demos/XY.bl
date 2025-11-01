@@ -19,7 +19,7 @@ model XY {
           if ((first < -PI || first > PI || second < -PI || second > PI))
             return NEGATIVE_INFINITY
           else
-            return cos(first - second)) 
+            return cos(first - second) * beta) 
     }
     
     // Node potentials
