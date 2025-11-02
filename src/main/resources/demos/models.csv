@@ -1,5 +1,5 @@
 name,description,class,arguments
-sonar,Logistic regression on Sonar dataset,glms.SonarLogisticRegression,--model.data data/sonar/sonar-covariates.csv --model.instances.name idx --model.instances.maxSize 208 --model.labels.dataSource data/sonar/sonar-response.csv --model.labels.name response
+sonar,Logistic regression on Sonar dataset,glms.SonarLogisticRegression,--model.data data/sonar/sonar-covariates.csv --model.instances.name index --model.instances.maxSize 208 --model.features.maxSize 60 --model.labels.dataSource data/sonar/sonar-response.csv --model.labels.name response
 titanic,Spike and Slab classification on the Titanic passengers dataset,glms.SpikeSlabClassification,--model.data data/titanic/titanic-covariates.csv --model.instances.name Name --model.instances.maxSize 200 --model.labels.dataSource data/titanic/titanic.csv --model.labels.name Survived
 elliptic,Synthetic unidentifiable and multimodal problem built from an elliptic curve,demos.UnidentifiableEllipticCurve,
 Ising-critical,Classical Ising model at the critical point,blang.validation.internals.fixtures.Ising,
